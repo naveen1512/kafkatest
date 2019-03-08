@@ -9,10 +9,11 @@ import org.apache.commons.lang.SerializationUtils;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeoutException;
 
 public class QueueConsumer extends EndPoint implements Runnable, Consumer {
 
-    public QueueConsumer(String endPointName) throws IOException {
+    public QueueConsumer(String endPointName) throws IOException, TimeoutException {
         super(endPointName);
     }
 
